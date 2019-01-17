@@ -27,13 +27,13 @@
                             <div class="widget widget_links clearfix">
                                 <h4>Blogroll</h4>
                                 <ul>
-                                    <li><a href="">Documentation</a></li>
-                                    <li><a href="">Feedback</a></li>
-                                    <li><a href="">Plugins</a></li>
-                                    <li><a href="">Support Forums</a></li>
-                                    <li><a href="">Themes</a></li>
-                                    <li><a href="">WordPress Blog</a></li>
-                                    <li><a href="">WordPress Planet</a></li>
+                                    <li><a href="#">Documentation</a></li>
+                                    <li><a href="#">Feedback</a></li>
+                                    <li><a href="#">Plugins</a></li>
+                                    <li><a href="#">Support Forums</a></li>
+                                    <li><a href="#">Themes</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Laracast</a></li>
                                 </ul>
                             </div>
                         </div>
