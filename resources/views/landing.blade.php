@@ -240,6 +240,54 @@
                         <div class="clear"></div>
 
                         <div id="portfolio" class="portfolio grid-container portfolio-3 clearfix" style="position: relative; height: 1108.5px;">
+                            
+                            <article class="portfolio-item pf-illustrations pf-icons" data-animate="bounceInRight" style="position: absolute; left: 770px; top: 739px;">
+                                <div class="portfolio-image">
+                                    <div class="fslider" data-arrows="false" data-speed="650" data-pause="3500"
+                                        data-animation="fade">
+                                        <div class="flexslider" style="height: 277.5px;">
+                                            <div class="slider-wrap">
+                                                <div class="slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"
+                                                    data-thumb-alt=""><a href="images/websites/hiddenchef1.png"><img
+                                                            src="images/websites/hiddenchef1.png" alt="Bridge Side"
+                                                            draggable="false"></a></div>
+                                                <div class="slide" data-thumb-alt="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"><a
+                                                        href="images/websites/hiddenchef2.png"><img
+                                                            src="images/websites/hiddenchef2.png" alt="Bridge Side"
+                                                            draggable="false"></a></div>
+                                                <div class="slide flex-active-slide" data-thumb-alt="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;"><a
+                                                        href="images/websites/hiddenchef3.png"><img
+                                                            src="images/websites/hiddenchef3.png" alt="Bridge Side"
+                                                            draggable="false"></a></div>
+                                            </div>
+                                            <ol class="flex-control-nav flex-control-paging">
+                                                <li><a href="images/websites/hiddenchef1.png"
+                                                        class="">1</a></li>
+                                                <li><a href="images/websites/hiddenchef2.png"
+                                                        class="">2</a></li>
+                                                <li><a href="images/websites/hiddenchef3.png"
+                                                        class="flex-active">3</a></li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-overlay" data-lightbox="gallery">
+                                        <a href="images/websites/hiddenchef1.png"
+                                            class="left-icon" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
+                                        <a href="images/websites/hiddenchef2.png"
+                                            class="hidden" data-lightbox="gallery-item"></a>
+                                        <a href="images/websites/hiddenchef3.png"
+                                            class="hidden" data-lightbox="gallery-item"></a>
+                                        <a href="images/websites/hiddenchef1.png"
+                                            class="right-icon"><i class="icon-line-ellipsis"></i></a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-desc">
+                                    <h3><a href="{{route('single.portfolio',5)}}">Hidden Chef</a></h3>
+                                    <span>Food | Resturant
+                                        </span>
+                                </div>
+                            </article>
+
                             <article data-animate="bounceInLeft" id="roll" class="portfolio-item pf-illustrations pf-icons" style="position: absolute; left: 770px; top: 739px;">
                                 <div class="portfolio-image">
                                     <div class="fslider" data-arrows="false" data-speed="650" data-pause="3500"
@@ -467,53 +515,6 @@
                                 <div class="portfolio-desc">
                                     <h3><a href="{{route('single.portfolio',1)}}">Orchid Design & Development</a></h3>
                                     <span>Real State | Builder
-                                        </span>
-                                </div>
-                            </article>
-                    
-                            <article class="portfolio-item pf-illustrations pf-icons" data-animate="bounceInRight" style="position: absolute; left: 770px; top: 739px;">
-                                <div class="portfolio-image">
-                                    <div class="fslider" data-arrows="false" data-speed="650" data-pause="3500"
-                                        data-animation="fade">
-                                        <div class="flexslider" style="height: 277.5px;">
-                                            <div class="slider-wrap">
-                                                <div class="slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"
-                                                    data-thumb-alt=""><a href="images/websites/cargopoint1.png"><img
-                                                            src="images/websites/cargopoint1.png" alt="Bridge Side"
-                                                            draggable="false"></a></div>
-                                                <div class="slide" data-thumb-alt="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"><a
-                                                        href="images/websites/cargopoint2.png"><img
-                                                            src="images/websites/cargopoint2.png" alt="Bridge Side"
-                                                            draggable="false"></a></div>
-                                                <div class="slide flex-active-slide" data-thumb-alt="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;"><a
-                                                        href="images/websites/cargopoint3.png"><img
-                                                            src="images/websites/cargopoint3.png" alt="Bridge Side"
-                                                            draggable="false"></a></div>
-                                            </div>
-                                            <ol class="flex-control-nav flex-control-paging">
-                                                <li><a href="images/websites/cargopoint1.png"
-                                                        class="">1</a></li>
-                                                <li><a href="images/websites/cargopoint2.png"
-                                                        class="">2</a></li>
-                                                <li><a href="images/websites/cargopoint3.png"
-                                                        class="flex-active">3</a></li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                    <div class="portfolio-overlay" data-lightbox="gallery">
-                                        <a href="images/websites/cargopoint1.png"
-                                            class="left-icon" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
-                                        <a href="images/websites/cargopoint2.png"
-                                            class="hidden" data-lightbox="gallery-item"></a>
-                                        <a href="images/websites/bdtech3.png"
-                                            class="hidden" data-lightbox="gallery-item"></a>
-                                        <a href="images/websites/cargopoint1.png"
-                                            class="right-icon"><i class="icon-line-ellipsis"></i></a>
-                                    </div>
-                                </div>
-                                <div class="portfolio-desc">
-                                    <h3><a href="{{route('single.portfolio',4)}}">Cargo Point BD</a></h3>
-                                    <span>Cargo Services
                                         </span>
                                 </div>
                             </article>

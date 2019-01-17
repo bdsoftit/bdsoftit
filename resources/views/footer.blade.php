@@ -47,7 +47,7 @@
                                     <h5 class="nobottommargin">Total Hits</h5>
                                 </div>
                                 <div class="col-lg-6 bottommargin-sm">
-                                    <div class="counter counter-small"><span data-from="100" data-to="65"
+                                    <div class="counter counter-small"><span data-from="100" data-to="105"
                                             data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
                                     <h5 class="nobottommargin">Clients</h5>
                                 </div>

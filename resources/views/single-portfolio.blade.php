@@ -71,54 +71,17 @@
                     </div>
 
                     <div style="" class="col_one_third nobottommargin ">
-
+                    <br><br><br>
                         <div class="card events-meta">
                             <div class="card-body">
                                 <ul class="portfolio-meta nobottommargin">
-                                    <li><span><i class="icon-user"></i>Created by:</span> John Doe</li>
-                                    <li><span><i class="icon-calendar3"></i>Completed on:</span> 17th March 2014</li>
+                                    <li><span><i class="icon-user"></i>Created by:</span> BD Soft It</li>
+                                    <li><span><i class="icon-calendar3"></i>Time Period:</span> 15 Days</li>
                                     <li><span><i class="icon-lightbulb"></i>Skills:</span> HTML5 / PHP / CSS3</li>
-                                    <li><span><i class="icon-link"></i>Client:</span> <a href="">Google</a></li>
                                 </ul>
                             </div>
                         </div>
 
-
-                        <div class="si-share noborder clearfix">
-                            <span>Share:</span>
-                            <div>
-                                <a href=""
-                                    class="social-icon si-borderless si-facebook">
-                                    <i class="icon-facebook"></i>
-                                    <i class="icon-facebook"></i>
-                                </a>
-                                <a href=""
-                                    class="social-icon si-borderless si-twitter">
-                                    <i class="icon-twitter"></i>
-                                    <i class="icon-twitter"></i>
-                                </a>
-                                <a href=""
-                                    class="social-icon si-borderless si-pinterest">
-                                    <i class="icon-pinterest"></i>
-                                    <i class="icon-pinterest"></i>
-                                </a>
-                                <a href=""
-                                    class="social-icon si-borderless si-gplus">
-                                    <i class="icon-gplus"></i>
-                                    <i class="icon-gplus"></i>
-                                </a>
-                                <a href=""
-                                    class="social-icon si-borderless si-rss">
-                                    <i class="icon-rss"></i>
-                                    <i class="icon-rss"></i>
-                                </a>
-                                <a href=""
-                                    class="social-icon si-borderless si-email3">
-                                    <i class="icon-email3"></i>
-                                    <i class="icon-email3"></i>
-                                </a>
-                            </div>
-                        </div>
 
                     </div>
 
@@ -159,7 +122,7 @@
                                 </div>
                                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                                   <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor
+                                    admin panel is a must have for web applications like e-commerce projects or content management systems, known as CMS, and these beautiful panels are full of features created to make your life easier. 
                                   </div>
                                 </div>
                               </div>
@@ -178,7 +141,7 @@
                                 </div>
                                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                                   <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor
+                                    Action buttons are built-in shapes you can add to a presentation and set to link to another slide, play a sound, or perform a similar action. When someone clicks or hovers over the button, the selected action will occur. 
                                   </div>
                                 </div>
                               </div>
@@ -197,7 +160,7 @@
                                 </div>
                                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                                   <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor
+                                    admin panel is a must have for web applications like e-commerce projects or content management systems, known as CMS, and these beautiful panels are full of features created to make your life easier. 
                                   </div>
                                 </div>
                               </div>
