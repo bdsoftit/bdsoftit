@@ -27,7 +27,8 @@
         }
     </style>
 
-    <title>Home | BD Soft IT</title>
+    <title>A Creative Software Company | BD Soft IT</title>
+    <link rel="shortcut icon" href="{{asset('/images/logo/bdsoftit_logo.png')}}" />
 </head>
 
 <body class="stretched">
@@ -53,13 +54,13 @@
                     <div id="logo">
                         <a href="{{url('/')}}" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo/bdsoftit_logo.png"
                                 alt="Canvas Logo"></a>
-                        <a href="index-2.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo%402x.png"
+                        <a href="{{url('/')}}" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo%402x.png"
                                 alt="Canvas Logo"></a>
                     </div>
 
                     <nav id="primary-menu">
                         <ul>
-                            <li class="current"><a href="index-2.html">
+                            <li class="current"><a href="{{url('/')}}">
                                     <div>Home</div>
                                 </a>
                             </li>
@@ -140,7 +141,7 @@
 
                         <div id="top-search">
                             <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
-                            <form action="http://themes.semicolonweb.com/html/canvas/search.html" method="get">
+                            <form action="{{url('/')}}" method="get">
                                 <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
                             </form>
                         </div>
@@ -192,7 +193,7 @@
                             <div class="col_three_fifth nobottommargin">
                                 <div class="emphasis-title">
                                     <h2 style="text-align: center;">We Help You Look Good!</h2>
-                                    <p class="lead topmargin-sm">Create beautiful unlimited full-screen Whether you are an experienced web manager or a new lead for your company's website, we will help you figure it out and make you look good in the process ;-) <a href="{{url('/contact')}}">Give us a call now!</a></p>
+                                    <p class="lead topmargin-sm">Create beautiful unlimited full-screen Whether you are an experienced web manager or a new lead for your company's website, we will help you figure it out and make you look good in the process ;-) <a style="color: #1abc9c;" href="{{url('/contact')}}"><u><b>Give us a call now!</b></u></a></p>
                                 </div>
                             </div>
                         </div>
@@ -202,9 +203,7 @@
                     <div class="col-lg-4 dark col-padding ohidden bounce" data-animate="bounceIn" style="background-color: #1abc9c;">
                         <div>
                             <h3 class="uppercase" style="font-weight: 600;text-align: center;">Why choose Us</h3>
-                            <p style="line-height: 1.8;text-align: center;">Transform, agency working families thinkers who make change
-                                happen communities. Developing nations legal aid public sector our ambitions future aid
-                                The Elders economic security Rosa.</p>
+                            <p style="line-height: 1.8;text-align: center;">Through custom web apps,web design, we’ve helped businesses make more informed decisions thanks to intelligent data driven systems, collaborate better as teams through synchronized platforms, streamline operations with internal process management tools, and engage their audience in a more meaningful way with digital campaigns. Through it all, we measure key performance indicators to determine ROI and inform future iterations.</p>
                             
                             <i class="icon-bulb bgicon"></i>
                         </div>
@@ -212,9 +211,7 @@
                     <div class="col-lg-4 dark col-padding ohidden" data-animate="bounceIn" style="background-color: #34495e;">
                         <div>
                             <h3 class="uppercase" style="font-weight: 600;text-align: center;">Our Mission</h3>
-                            <p style="line-height: 1.8;text-align: center;">Frontline respond, visionary collaborative cities advancement
-                                overcome injustice, UNHCR public-private partnerships cause. Giving, country educate
-                                rights-based approach; leverage disrupt solution.</p>
+                            <p style="line-height: 1.8;text-align: center;">We absorb your requirements and build a trusted, visually rich user-product relationship to boost adoption and satisfaction. Our  team takes it from there to nail that ultimate user journey in code.Let BD Soft IT's architects and senior engineers get to design and build the core of your application — with an eye for availability, robustness, and great new features.</p>
                             
                             <i class="icon-cog bgicon"></i>
                         </div>
@@ -222,9 +219,7 @@
                     <div class="col-lg-4 dark col-padding ohidden" data-animate="bounceIn" style="background-color: #e74c3c;">
                         <div>
                             <h3 class="uppercase" style="font-weight: 600;text-align: center;">What you get</h3>
-                            <p style="line-height: 1.8;text-align: center;">Sustainability involvement fundraising campaign connect carbon
-                                rights, collaborative cities convener truth. Synthesize change lives treatment
-                                fluctuation participatory monitoring underprivileged equal.</p>
+                            <p style="line-height: 1.8;text-align: center;">We assist organizations to achieve total operational efficiency and independence through our intuitive custom web applications. Our technology stack includes the newest technologies such as PHP, MySql, MongoDB, Angular, React, Node.js, etc.We strive for efficiency in our custom web applications by subjecting them to accepted design standards and testing. In this way, we deliver our clients dependable web applications that can be up and running from day one of implementation.</p>
                             
                             <i class="icon-thumbs-up bgicon"></i>
                         </div>
@@ -383,148 +378,145 @@
                                         </span>
                                 </div>
                             </article>
-                            <article class="portfolio-item pf-illustrations pf-icons" data-animate="bounceInLeft" style="position: absolute; left: 770px; top: 739px;">
+                            <article class="portfolio-item pf-illustrations pf-icons" data-animate="bounceInRight" style="position: absolute; left: 770px; top: 739px;">
                                 <div class="portfolio-image">
                                     <div class="fslider" data-arrows="false" data-speed="650" data-pause="3500"
                                         data-animation="fade">
                                         <div class="flexslider" style="height: 277.5px;">
                                             <div class="slider-wrap">
                                                 <div class="slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"
-                                                    data-thumb-alt=""><a href=""><img
-                                                            src="images/portfolio/4/2.jpg" alt="Bridge Side"
+                                                    data-thumb-alt=""><a href="images/websites/cargopoint1.png"><img
+                                                            src="images/websites/cargopoint1.png" alt="Bridge Side"
                                                             draggable="false"></a></div>
                                                 <div class="slide" data-thumb-alt="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"><a
-                                                        href=""><img
-                                                            src="images/portfolio/4/6-3.jpg" alt="Bridge Side"
+                                                        href="images/websites/cargopoint2.png"><img
+                                                            src="images/websites/cargopoint2.png" alt="Bridge Side"
                                                             draggable="false"></a></div>
                                                 <div class="slide flex-active-slide" data-thumb-alt="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;"><a
-                                                        href=""><img
-                                                            src="images/portfolio/4/5.jpg" alt="Bridge Side"
+                                                        href="images/websites/cargopoint3.png"><img
+                                                            src="images/websites/cargopoint3.png" alt="Bridge Side"
                                                             draggable="false"></a></div>
                                             </div>
                                             <ol class="flex-control-nav flex-control-paging">
-                                                <li><a href=""
+                                                <li><a href="images/websites/cargopoint1.png"
                                                         class="">1</a></li>
-                                                <li><a href=""
+                                                <li><a href="images/websites/cargopoint2.png"
                                                         class="">2</a></li>
-                                                <li><a href=""
+                                                <li><a href="images/websites/cargopoint3.png"
                                                         class="flex-active">3</a></li>
                                             </ol>
                                         </div>
                                     </div>
                                     <div class="portfolio-overlay" data-lightbox="gallery">
-                                        <a href=""
+                                        <a href="images/websites/cargopoint1.png"
                                             class="left-icon" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
-                                        <a href=""
+                                        <a href="images/websites/cargopoint2.png"
                                             class="hidden" data-lightbox="gallery-item"></a>
-                                        <a href=""
+                                        <a href="images/websites/bdtech3.png"
                                             class="hidden" data-lightbox="gallery-item"></a>
-                                        <a href=""
+                                        <a href="images/websites/cargopoint1.png"
                                             class="right-icon"><i class="icon-line-ellipsis"></i></a>
                                     </div>
                                 </div>
                                 <div class="portfolio-desc">
-                                    <h3><a href="">Bridge
-                                            Side</a></h3>
-                                    <span>Illustrations
+                                    <h3><a href="{{route('single.portfolio',4)}}">Cargo Point BD</a></h3>
+                                    <span>Cargo Services
                                         </span>
                                 </div>
                             </article>
-                            <article class="portfolio-item pf-illustrations pf-icons" data-animate="bounceInUp" style="position: absolute; left: 770px; top: 739px;">
+                            <article data-animate="bounceInLeft" id="roll" class="portfolio-item pf-illustrations pf-icons" style="position: absolute; left: 770px; top: 739px;">
                                 <div class="portfolio-image">
                                     <div class="fslider" data-arrows="false" data-speed="650" data-pause="3500"
                                         data-animation="fade">
                                         <div class="flexslider" style="height: 277.5px;">
                                             <div class="slider-wrap">
                                                 <div class="slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"
-                                                    data-thumb-alt=""><a href=""><img
-                                                            src="images/portfolio/4/2.jpg" alt="Bridge Side"
+                                                    data-thumb-alt=""><a href="images/websites/realstate1.png"><img
+                                                            src="images/websites/realstate1.png" alt="Bridge Side"
                                                             draggable="false"></a></div>
                                                 <div class="slide" data-thumb-alt="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"><a
-                                                        href=""><img
-                                                            src="images/portfolio/4/6-3.jpg" alt="Bridge Side"
+                                                        href="images/websites/realstate1.png"><img
+                                                            src="images/websites/realstate2.png" alt="Bridge Side"
                                                             draggable="false"></a></div>
                                                 <div class="slide flex-active-slide" data-thumb-alt="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;"><a
-                                                        href=""><img
-                                                            src="images/portfolio/4/5.jpg" alt="Bridge Side"
+                                                        href="images/websites/realstate1.png"><img
+                                                            src="images/websites/realstate3.png" alt="Bridge Side"
                                                             draggable="false"></a></div>
                                             </div>
                                             <ol class="flex-control-nav flex-control-paging">
-                                                <li><a href=""
+                                                <li><a href="images/websites/realstate1.png"
                                                         class="">1</a></li>
-                                                <li><a href=""
+                                                <li><a href="images/websites/realstate2.png"
                                                         class="">2</a></li>
-                                                <li><a href=""
+                                                <li><a href="images/websites/realstate3.png"
                                                         class="flex-active">3</a></li>
                                             </ol>
                                         </div>
                                     </div>
                                     <div class="portfolio-overlay" data-lightbox="gallery">
-                                        <a href=""
+                                        <a href="images/websites/realstate1.png"
                                             class="left-icon" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
-                                        <a href=""
+                                        <a href="images/websites/realstate2.png"
                                             class="hidden" data-lightbox="gallery-item"></a>
-                                        <a href=""
+                                        <a href="images/websites/realstate3.png"
                                             class="hidden" data-lightbox="gallery-item"></a>
-                                        <a href=""
+                                        <a href="images/websites/realstate1.png"
                                             class="right-icon"><i class="icon-line-ellipsis"></i></a>
                                     </div>
                                 </div>
                                 <div class="portfolio-desc">
-                                    <h3><a href="">Bridge
-                                            Side</a></h3>
-                                    <span><a href="">Illustrations</a>,
-                                        <a href="">Icons</a></span>
+                                    <h3><a href="{{route('single.portfolio',1)}}">Orchid Design & Development</a></h3>
+                                    <span>Real State | Builder
+                                        </span>
                                 </div>
                             </article>
-                            <article class="portfolio-item pf-illustrations pf-icons" data-animate="bounceInUp" style="position: absolute; left: 770px; top: 739px;">
+                    
+                            <article class="portfolio-item pf-illustrations pf-icons" data-animate="bounceInRight" style="position: absolute; left: 770px; top: 739px;">
                                 <div class="portfolio-image">
                                     <div class="fslider" data-arrows="false" data-speed="650" data-pause="3500"
                                         data-animation="fade">
                                         <div class="flexslider" style="height: 277.5px;">
                                             <div class="slider-wrap">
                                                 <div class="slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"
-                                                    data-thumb-alt=""><a href=""><img
-                                                            src="images/portfolio/4/2.jpg" alt="Bridge Side"
+                                                    data-thumb-alt=""><a href="images/websites/cargopoint1.png"><img
+                                                            src="images/websites/cargopoint1.png" alt="Bridge Side"
                                                             draggable="false"></a></div>
                                                 <div class="slide" data-thumb-alt="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"><a
-                                                        href=""><img
-                                                            src="images/portfolio/4/6-3.jpg" alt="Bridge Side"
+                                                        href="images/websites/cargopoint2.png"><img
+                                                            src="images/websites/cargopoint2.png" alt="Bridge Side"
                                                             draggable="false"></a></div>
                                                 <div class="slide flex-active-slide" data-thumb-alt="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;"><a
-                                                        href=""><img
-                                                            src="images/portfolio/4/5.jpg" alt="Bridge Side"
+                                                        href="images/websites/cargopoint3.png"><img
+                                                            src="images/websites/cargopoint3.png" alt="Bridge Side"
                                                             draggable="false"></a></div>
                                             </div>
                                             <ol class="flex-control-nav flex-control-paging">
-                                                <li><a href=""
+                                                <li><a href="images/websites/cargopoint1.png"
                                                         class="">1</a></li>
-                                                <li><a href=""
+                                                <li><a href="images/websites/cargopoint2.png"
                                                         class="">2</a></li>
-                                                <li><a href=""
+                                                <li><a href="images/websites/cargopoint3.png"
                                                         class="flex-active">3</a></li>
                                             </ol>
                                         </div>
                                     </div>
                                     <div class="portfolio-overlay" data-lightbox="gallery">
-                                        <a href=""
+                                        <a href="images/websites/cargopoint1.png"
                                             class="left-icon" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
-                                        <a href=""
+                                        <a href="images/websites/cargopoint2.png"
                                             class="hidden" data-lightbox="gallery-item"></a>
-                                        <a href=""
+                                        <a href="images/websites/bdtech3.png"
                                             class="hidden" data-lightbox="gallery-item"></a>
-                                        <a href=""
+                                        <a href="images/websites/cargopoint1.png"
                                             class="right-icon"><i class="icon-line-ellipsis"></i></a>
                                     </div>
                                 </div>
                                 <div class="portfolio-desc">
-                                    <h3><a href="">Bridge
-                                            Side</a></h3>
-                                    <span><a href="">Illustrations</a>,
-                                        <a href="">Icons</a></span>
+                                    <h3><a href="{{route('single.portfolio',4)}}">Cargo Point BD</a></h3>
+                                    <span>Cargo Services
+                                        </span>
                                 </div>
                             </article>
-                            
                         </div>
                     </div>
                 </div>

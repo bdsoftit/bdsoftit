@@ -19,7 +19,8 @@
     <link rel="stylesheet" href="{{asset('css/responsive.css')}}" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portfolio Single</title>
+    <title>Portfolio | BD Soft IT</title>
+    <link rel="shortcut icon" href="{{asset('/images/logo/bdsoftit_logo.png')}}" />
     <style id="fit-vids-style">
     #page-title {
      padding: 0; 

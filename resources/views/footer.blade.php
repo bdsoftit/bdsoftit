@@ -57,12 +57,12 @@
                             <div class="col-md-12">
                                 <form class="form-inline" method="get" action="{{route('subscribe')}}">
                                     @csrf
-                                  <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+                                  <label class="sr-only" for="inlineFormInputGroupUsername2">E-mail</label>
                                   <div class="input-group mb-2 mr-sm-2">
                                     <div class="input-group-prepend">
                                       <div class="input-group-text"><i class="fa fa-telegram"></i></div>
                                     </div>
-                                    <input name="email" type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
+                                    <input name="email" type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="E-mail">
                                   </div>
                                   <button type="submit" class="btn btn-success mb-2">Submit</button>
                                 </form>

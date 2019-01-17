@@ -7,14 +7,14 @@
                         <a href="{{url('/')}}" class="standard-logo"
                             data-dark-logo="images/logo-dark.png"><img src="{{asset('images/logo/bdsoftit_logo_1.gif')}}"
                                 alt="Canvas Logo"></a>
-                        <a href="http://themes.semicolonweb.com/html/canvas/index.html" class="retina-logo"
+                        {{-- <a href="{{url('/')}}"
                             data-dark-logo="images/logo-dark@2x.png"><img src="./Portfolio Single - Gallery Full Width _ Canvas_files/logo@2x.png"
-                                alt="Canvas Logo"></a>
+                                alt="Canvas Logo"></a> --}}
                     </div>
 
                     <nav id="primary-menu">
                         <ul>
-                            <li class="current"><a href="index-2.html">
+                            <li class="current"><a href="{{url('/')}}">
                                     <div>Home</div>
                                 </a>
                             </li>

@@ -21,6 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Services | BD Soft IT</title>
+    <link rel="shortcut icon" href="{{asset('/images/logo/bdsoftit_logo.png')}}" />
     <style type="text/css">
         /* Chart.js */
         @-webkit-keyframes chartjs-render-animation {

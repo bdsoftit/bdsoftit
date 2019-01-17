@@ -1,5 +1,6 @@
 <?php
 
+use App\Pakage;
 use App\Subscribe;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -34,7 +35,8 @@ Route::get('/web-design', function () {
     return view('web-design');
 });
 Route::get('/hosting', function () {
-    return view('hosting');
+    $pakage=Pakage::all();
+    return view('hosting')->with('pakage',$pakage);
 });
 
 Route::get('/project/{id}', 'HomeController@portfolio')->name('single.portfolio');
@@ -45,6 +47,19 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/home', 'AdminController@index')->name('home');
     Route::get('/portfolio/edit/{id}', 'AdminController@portfolioEdit')->name('portfolio.edit');
     Route::put('/portfolio/edit/', 'AdminController@portfolioEditPost')->name('edit.portfolio.post');
+
+
+    Route::get('/pakage', 'AdminController@pakageShow')->name('pakage.show');
+    Route::get('/pakage/add', 'AdminController@pakageAdd')->name('pakage.add');
+    Route::post('/pakage/add', 'AdminController@pakageAddPost')->name('pakage.add.post');
+    Route::get('/pakage/{id}', 'AdminController@pakageEdit')->name('pakage.edit');
+    Route::put('/pakage/edit', 'AdminController@pakageEditPost')->name('pakage.edit.post');
+    Route::delete('/pakage/delete/{id}', 'AdminController@pakageDelete')->name('pakage.delete');
+
+    Route::get('/subscribers', function () {
+    $emails=Subscribe::all();
+    return view('admin.subscribers')->with('emails',$emails);
+    })->name('subscribers');
 
 });
 

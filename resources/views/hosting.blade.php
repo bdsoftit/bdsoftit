@@ -21,6 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Hosting | BD Soft IT</title>
+    <link rel="shortcut icon" href="{{asset('/images/logo/bdsoftit_logo.png')}}" />
     <style type="text/css">
         /* Chart.js */
         @-webkit-keyframes chartjs-render-animation {
@@ -125,99 +126,31 @@
                 <span>We believe in Flexible Costing.</span>
             </div>
             <div class="row pricing bottommargin clearfix">
+            @foreach($pakage as $pakage)
                 <div class="col-lg-3">
                     <div class="pricing-box">
                         <div class="pricing-title">
-                            <h3>Starter</h3>
+                            <h3>{{$pakage->title}}</h3>
                         </div>
                         <div class="pricing-price">
-                            <span class="price-unit">BDT</span>7000<span class="price-tenure">/mo</span>
+                            <span class="price-unit">BDT</span><span style="color: #1abc9c;">{{$pakage->cost}}</span><span class="price-tenure">/{{$pakage->details_one}}</span>
                         </div>
                         <div class="pricing-features">
                             <ul>
-                                <li><strong>1</strong> Domain</li>
-                                <li>One Click Installs</li>
-                                <li><strong>100</strong> Unlimited Email</li>
-                                <li><strong>1 Year</strong> SSL License</li>
-                                <li>Phone &amp; Email Support</li>
+                                <li>{{$pakage->details_two}}</li>
+                                <li>{{$pakage->details_three}}</li>
+                                <li>{{$pakage->details_four}}</li>
+                                <li>{{$pakage->details_five}}</li>
+                                <li>{{$pakage->details_six}}</li>
                             </ul>
                         </div>
                         <div class="pricing-action">
-                            <a href="{{url('contact')}}" class="btn btn-danger btn-block btn-lg">Contact US</a>
+                            <a href="{{url('contact')}}" class="btn btn-success btn-block btn-lg">Contact US</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="pricing-box best-price">
-                        <div class="pricing-title">
-                            <h3>Professional</h3>
-                            <span>Most Popular</span>
-                        </div>
-                        <div class="pricing-price">
-                            <span class="price-unit">BDT</span>12000<span class="price-tenure">/mo</span>
-                        </div>
-                        <div class="pricing-features">
-                            <ul>
-                                <li><strong>Full</strong> Access</li>
-                                <li><i class="icon-code"></i> Source Files</li>
-                                <li><strong>10</strong> Database</li>
-                                <li><strong>2 Years</strong> License</li>
-                                <li><i class="icon-star3"></i>
-                                    <i class="icon-star3"></i>
-                                    <i class="icon-star3"></i>
-                                    <i class="icon-star3"></i>
-                                    <i class="icon-star3"></i></li>
-                            </ul>
-                        </div>
-                        <div class="pricing-action">
-                            <a href="{{url('contact')}}" class="btn btn-danger btn-block btn-lg">Contact US</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="pricing-box">
-                        <div class="pricing-title">
-                            <h3>Business</h3>
-                        </div>
-                        <div class="pricing-price">
-                            <span class="price-unit">BDT</span>19000<span class="price-tenure">/mo</span>
-                        </div>
-                        <div class="pricing-features">
-                            <ul>
-                                <li><strong>Unlimited</strong> Domain</li>
-                                <li> One Click Installs</li>
-                                <li><strong>100</strong> Unlimited Email</li>
-                                <li><strong>5 Year</strong> SSL License</li>
-                                <li>Unlimited Email Support</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-action">
-                            <a href="{{url('contact')}}" class="btn btn-danger btn-block btn-lg">Contact US</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="pricing-box">
-                        <div class="pricing-title">
-                            <h3>Enterprise</h3>
-                        </div>
-                        <div class="pricing-price">
-                            <span class="price-unit">BDT</span>29000<span class="price-tenure">/mo</span>
-                        </div>
-                        <div class="pricing-features">
-                            <ul>
-                                <li><strong>Unlimited</strong> Domain</li>
-                                <li> One Click Installs</li>
-                                <li><strong>100</strong> Unlimited Email</li>
-                                <li><strong>Private</strong> SSL License</li>
-                                <li>Dedicated IP</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-action">
-                            <a href="{{url('contact')}}" class="btn btn-danger btn-block btn-lg">Contact US</a>
-                        </div>
-                    </div>
-                </div>
+
+            @endforeach
             </div>
         </div>
         @include('footer')

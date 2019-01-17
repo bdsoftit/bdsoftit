@@ -8,9 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="shortcut icon" href="{{asset('/images/logo/bdsoftit_logo.png')}}" />
     @yield('style')
 
-    <title>Admin</title>
+    <title>Admin | BD Soft IT</title>
 
     <!-- Bootstrap core CSS-->
     <link href="{{asset('admin/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -109,6 +110,9 @@
             <i class="fa fa-user-circle fa-fw"></i>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+
+            
+            <a href="">&nbsp;&nbsp; {{Auth::user()->name}} </a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">Logout</a>
           </div>
@@ -122,16 +126,21 @@
       <!-- Sidebar -->
       <ul class="sidebar navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="">
+          <a class="nav-link" href="{{route('home')}}">
             <i class="fa fa-fw fa-bullseye"></i>
             <span>Dashboard</span>
           </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="">
-            <i class="fa fa-fw fa-search"></i>
-            <span>Search</span></a>
+          <a class="nav-link" href="{{route('pakage.show')}}">
+            <i class="fa fa-fw fa-bullseye"></i>
+            <span>pakages</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('subscribers')}}">
+            <i class="fa fa-fw fa-bullseye"></i>
+            <span>Subscribers</span></a>
         </li>
       </ul>
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Pakage;
 use App\Portfolio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
@@ -69,4 +70,99 @@ class AdminController extends Controller
 
         }
     }
+
+
+    public function pakageShow(){
+        $pakage=Pakage::all();
+        return view('admin.pakage-show')->with('pakage',$pakage);
+    }
+
+    public function pakageEdit($id){
+        $pakage=Pakage::find($id);
+        return view('admin.pakage-edit')->with('pakage',$pakage);
+    }
+
+    public function pakageEditPost(Request $request){
+        $validation = Validator::make(Input::all(), 
+        array(
+            'title'   => 'required',
+            'cost'      => 'required',
+            'o1'      => 'required',
+            'o2'      => 'required',
+            'o3'      => 'required',
+            'o4'      => 'required',
+            'o5'      => 'required',
+            )
+        );
+
+
+
+
+        if($validation->fails()) {
+        //withInput keep the users info
+        return Redirect::back()->withInput()->withErrors($validation->messages());
+         } else {
+
+        Pakage::where('id', $request->input('id'))->update(array(
+            'title'    =>  $request->input('title'),
+            'cost'    =>  $request->input('cost'),
+            'details_one'    =>  $request->input('mo'),
+            'details_two'    =>  $request->input('o1'),
+            'details_three'    =>  $request->input('o2'),
+            'details_four'    =>  $request->input('o3'),
+            'details_five'    =>  $request->input('o4'),
+            'details_six'    =>  $request->input('o5'),
+        ));
+        return redirect()->route('pakage.show');
+
+        }
+    }
+
+    public function pakageAdd(){
+        return view('admin.pakage-add');
+    }
+
+
+    public function pakageAddPost(Request $request){
+        $validation = Validator::make(Input::all(), 
+        array(
+            'title'   => 'required',
+            'cost'      => 'required',
+            'o1'      => 'required',
+            'o2'      => 'required',
+            'o3'      => 'required',
+            'o4'      => 'required',
+            'o5'      => 'required',
+            )
+        );
+
+
+
+
+        if($validation->fails()) {
+        //withInput keep the users info
+        return Redirect::back()->withInput()->withErrors($validation->messages());
+         } else {
+
+        Pakage::create([
+            'title'    =>  $request->input('title'),
+            'cost'    =>  $request->input('cost'),
+            'details_one'    =>  $request->input('mo'),
+            'details_two'    =>  $request->input('o1'),
+            'details_three'    =>  $request->input('o2'),
+            'details_four'    =>  $request->input('o3'),
+            'details_five'    =>  $request->input('o4'),
+            'details_six'    =>  $request->input('o5'),
+        ]);
+        return redirect()->route('pakage.show');
+
+        }
+    }
+
+        public function pakageDelete($id){
+        $del=Pakage::destroy($id);
+        return redirect()->route('pakage.show');
+    }
+
+
 }
