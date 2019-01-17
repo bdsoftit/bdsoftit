@@ -125,15 +125,31 @@
                 <h2>Pricing.</h2>
                 <span>We believe in Flexible Costing.</span>
             </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <select class="form-control form-control-lg" id="currency" name="currency" onchange="currency();">
+                        <option disabled selected>Select Currency</option>
+                         @foreach($currency as $currency)
+                        <option data-name="{{$currency->name}}" value="{{$currency->rate}}">{{$currency->name}}</option>
+                        @endforeach
+                    </select>
+
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+                
             <div class="row pricing bottommargin clearfix">
-            @foreach($pakage as $pakage)
+            @foreach($pakage as $index=> $pakage)
                 <div class="col-lg-3">
                     <div class="pricing-box">
                         <div class="pricing-title">
                             <h3>{{$pakage->title}}</h3>
                         </div>
                         <div class="pricing-price">
-                            <span class="price-unit">BDT</span><span style="color: #1abc9c;">{{$pakage->cost}}</span><span class="price-tenure">/{{$pakage->details_one}}</span>
+                            <span id="currencyNameChangeble{{$index}}" class="price-unit">BDT</span><span id="balance{{$index}}" style="color: #1abc9c;">{{$pakage->cost}}</span><span class="price-tenure">/{{$pakage->details_one}}</span>
+                            <input type="hidden"  id="price{{$index}}" value="{{$pakage->cost}}">
+                        
                         </div>
                         <div class="pricing-features">
                             <ul>
@@ -186,6 +202,45 @@
     <script src="{{asset('js/plugins.js')}}"></script>
 
     <script src="{{asset('js/functions.js')}}"></script>
+
+    <script>
+        function currency(){
+             var currency=document.getElementById("currency").value;
+             var pak1=document.getElementById("price0").value;
+             var pak2=document.getElementById("price1").value;
+             var pak3=document.getElementById("price2").value;
+             var pak4=document.getElementById("price3").value;
+             
+             document.getElementById("balance0").innerText = Math.round(pak1/currency);
+             document.getElementById("balance1").innerText = Math.round(pak2/currency);
+             document.getElementById("balance2").innerText = Math.round(pak3/currency);
+             document.getElementById("balance3").innerText = Math.round(pak4/currency);
+             
+             if (document.getElementById("price4").value) {
+                var pak5=document.getElementById("price4").value;
+                document.getElementById("balance4").innerText = Math.round(pak5/currency);
+             }
+             if (document.getElementById("price5").value) {
+                var pak6=document.getElementById("price5").value;
+                document.getElementById("balance5").innerText = Math.round(pak6/currency);
+             }
+        }
+
+        $("#currency").change(function () {
+             document.getElementById("currencyNameChangeble0").innerText = $(this).find(':selected').data('name');
+             document.getElementById("currencyNameChangeble1").innerText = $(this).find(':selected').data('name');
+             document.getElementById("currencyNameChangeble2").innerText = $(this).find(':selected').data('name');
+             document.getElementById("currencyNameChangeble3").innerText = $(this).find(':selected').data('name');
+
+             if (document.getElementById("currencyNameChangeble4").value) {
+                document.getElementById("currencyNameChangeble4").innerText = $(this).find(':selected').data('name');
+             }
+             if (document.getElementById("currencyNameChangeble5").value) {
+                document.getElementById("currencyNameChangeble6").innerText = $(this).find(':selected').data('name');
+             }
+        });
+
+    </script>
 
     <script>
         var randomScalingFactor = function () {

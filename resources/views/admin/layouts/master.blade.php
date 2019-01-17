@@ -114,7 +114,7 @@
             
             <a href="">&nbsp;&nbsp; {{Auth::user()->name}} </a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">Logout</a>
+            <a class="dropdown-item" href="{{route('logout')}}" >Logout</a>
           </div>
         </li>
       </ul>
@@ -141,6 +141,11 @@
           <a class="nav-link" href="{{route('subscribers')}}">
             <i class="fa fa-fw fa-bullseye"></i>
             <span>Subscribers</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('currency.show')}}">
+            <i class="fa fa-fw fa-bullseye"></i>
+            <span>Currency</span></a>
         </li>
       </ul>
 
@@ -169,7 +174,7 @@
         <footer class="sticky-footer">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright © Mustaque Ahemmed</span>
+              <span>Copyright © BD Soft IT</span>
             </div>
           </div>
         </footer>

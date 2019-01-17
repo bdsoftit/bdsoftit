@@ -1,6 +1,7 @@
 <?php
 
 use App\Pakage;
+use App\Currency;
 use App\Subscribe;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -35,8 +36,9 @@ Route::get('/web-design', function () {
     return view('web-design');
 });
 Route::get('/hosting', function () {
+    $currency=Currency::all();
     $pakage=Pakage::all();
-    return view('hosting')->with('pakage',$pakage);
+    return view('hosting')->with('pakage',$pakage)->with('currency',$currency);
 });
 
 Route::get('/project/{id}', 'HomeController@portfolio')->name('single.portfolio');
@@ -57,16 +59,25 @@ Route::group(['prefix' => 'admin'], function () {
     Route::delete('/pakage/delete/{id}', 'AdminController@pakageDelete')->name('pakage.delete');
 
     Route::get('/subscribers', function () {
-    $emails=Subscribe::all();
-    return view('admin.subscribers')->with('emails',$emails);
+        $emails=Subscribe::all();
+        return view('admin.subscribers')->with('emails',$emails);
     })->name('subscribers');
+
+
+    Route::get('/currency', 'AdminController@currencyShow')->name('currency.show');
+    Route::get('/currency/add', 'AdminController@currencyAdd')->name('currency.add');
+    Route::post('/currency/add', 'AdminController@currencyAddPost')->name('currency.add');
+    Route::get('/currency/edit/{id}', 'AdminController@currencyEdit')->name('currency.edit');
+    Route::put('/currency/edit', 'AdminController@currencyEditPost')->name('currency.edit.post');
+
+
 
 });
 
 
 // Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
-Route::post('/logout', 'Auth\LoginController@logout');
+Route::get('/logout', 'AdminController@logout')->name('logout');
+Route::post('/logout', 'AdminController@logout')->name('logout');
 
 
 Route::get('sendemail', 'HomeController@contactUSPost')->name('sendemail');

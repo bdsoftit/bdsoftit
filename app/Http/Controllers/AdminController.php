@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Pakage;
+use App\Currency;
 use App\Portfolio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
@@ -159,9 +161,81 @@ class AdminController extends Controller
         }
     }
 
-        public function pakageDelete($id){
+    public function pakageDelete($id){
         $del=Pakage::destroy($id);
         return redirect()->route('pakage.show');
+    }
+
+
+
+    
+    public function currencyShow(){
+        $currency=Currency::all();
+        return view('admin.currency-show')->with('currency',$currency);
+    }
+
+    public function currencyAdd(){
+        return view('admin.currency-add');
+    } 
+
+    public function currencyEdit($id){
+        $currency=Currency::find($id);
+        return view('admin.currency-edit')->with('currency',$currency);
+    }
+
+    public function currencyEditPost(Request $request){
+        $validation = Validator::make(Input::all(), 
+        array(
+            'name'   => 'required',
+            'rate'      => 'required',
+            )
+        );
+
+        if($validation->fails()) {
+        //withInput keep the users info
+        return Redirect::back()->withInput()->withErrors($validation->messages());
+         } else {
+
+        Currency::where('id',$request->input('id'))->update([
+            'name'    =>  $request->input('name'),
+            'rate'    =>  $request->input('rate'),
+        ]);
+
+        return redirect()->route('currency.show');
+
+        }
+    }
+
+    public function currencyAddPost(Request $request){
+        $validation = Validator::make(Input::all(), 
+        array(
+            'name'   => 'required',
+            'rate'      => 'required',
+            )
+        );
+
+        if($validation->fails()) {
+        //withInput keep the users info
+        return Redirect::back()->withInput()->withErrors($validation->messages());
+         } else {
+
+        Currency::create([
+            'name'    =>  $request->input('name'),
+            'rate'    =>  $request->input('rate'),
+        ]);
+
+        return redirect()->route('currency.show');
+
+        }
+    }
+
+
+
+
+
+    public function logout(Request $request) {
+      Auth::logout();
+      return redirect('/admin/login');
     }
 
 
