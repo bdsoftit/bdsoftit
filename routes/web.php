@@ -3,23 +3,9 @@
 use App\Pakage;
 use App\Currency;
 use App\Subscribe;
+use App\Emailhosting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 
 Route::get('/', function () {
@@ -29,16 +15,25 @@ Route::get('/', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
 Route::get('/web-application', function () {
     return view('web-application');
 });
+
 Route::get('/web-design', function () {
     return view('web-design');
 });
+
 Route::get('/hosting', function () {
     $currency=Currency::all();
     $pakage=Pakage::all();
     return view('hosting')->with('pakage',$pakage)->with('currency',$currency);
+});
+
+Route::get('/hosting/email', function () {
+    $currency=Currency::all();
+    $emailHosting=Emailhosting::all();
+    return view('email-hosting')->with('emailHosting',$emailHosting)->with('currency',$currency);
 });
 
 Route::get('/project/{id}', 'HomeController@portfolio')->name('single.portfolio');
@@ -57,6 +52,16 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/pakage/{id}', 'AdminController@pakageEdit')->name('pakage.edit');
     Route::put('/pakage/edit', 'AdminController@pakageEditPost')->name('pakage.edit.post');
     Route::delete('/pakage/delete/{id}', 'AdminController@pakageDelete')->name('pakage.delete');
+
+
+    Route::get('/emailhosting', 'AdminController@emailhostingShow')->name('emailhosting.show');
+    Route::get('/emailhosting/add', 'AdminController@emailhostingAdd')->name('emailhosting.add');
+    Route::post('/emailhosting/add', 'AdminController@emailhostingAddPost')->name('emailhosting.add.post');
+    Route::get('/emailhosting/{id}', 'AdminController@emailhostingEdit')->name('emailhosting.edit');
+    Route::put('/emailhosting/edit', 'AdminController@emailhostingEditPost')->name('emailhosting.edit.post');
+    Route::delete('/emailhosting/delete/{id}', 'AdminController@emailhostingDelete')->name('emailhosting.delete');
+
+
 
     Route::get('/subscribers', function () {
         $emails=Subscribe::all();

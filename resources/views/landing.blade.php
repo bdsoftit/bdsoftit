@@ -87,9 +87,9 @@
                                 <ul style="width: 351px; margin-right: 11px;" class="dropdown-menu" role="menu">
                                     <div class="row">
                                         <div class="col-md-8">
-                                            <li><a href="{{url('/hosting')}}">pakage 1</a>
+                                            <li><a href="{{url('/hosting')}}">Web Hosting</a>
                                             </li>
-                                            <li><a href="{{url('/hosting')}}">pakage 2</a>
+                                            <li><a href="{{url('/hosting/email')}}">E-mail Hosting</a>
                                             </li>
                                         </div>
                                         <div class="col-md-4">

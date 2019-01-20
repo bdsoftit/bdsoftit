@@ -52,7 +52,7 @@ class HomeController extends Controller
         'massage'=>$request->input('massage'),
     );
    
-      Mail::send(['text'=>'mail'], $data, function($message) use ($data) {
+      Mail::send(['html'=>'mail'], $data, function($message) use ($data) {
          $message->to('fratechnology@gmail.com', 'BD Soft IT')->subject
             ('Genarel Contact');
          $message->from($data['email'],$data['name']);

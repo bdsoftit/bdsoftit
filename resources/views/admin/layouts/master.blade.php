@@ -147,6 +147,11 @@
             <i class="fa fa-fw fa-bullseye"></i>
             <span>Currency</span></a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('emailhosting.show')}}">
+            <i class="fa fa-fw fa-bullseye"></i>
+            <span>Email Hosting</span></a>
+        </li>
       </ul>
 
       <div id="content-wrapper">
@@ -158,7 +163,17 @@
 
           <!-- Page Content -->
 
-
+        @if(!empty($errors->first()))
+        <div class="row ">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <div class="alert alert-danger">
+                <span>{{ $errors->first() }}</span>
+            </div></div>
+          <div class="col-md-4"></div>
+            
+        </div>
+       @endif
 
           @yield('content')
 

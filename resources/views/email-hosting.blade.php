@@ -76,7 +76,7 @@
 
         <section id="page-title">
             <div class="container clearfix">
-                <h1>Web Hosting</h1>
+                <h1>Email Hosting</h1>
             </div>
         </section>
 
@@ -140,24 +140,24 @@
             </div>
                 
             <div class="row pricing bottommargin clearfix">
-            @foreach($pakage as $index=> $pakage)
+            @foreach($emailHosting as $index=> $emailHosting)
                 <div class="col-lg-3">
                     <div class="pricing-box">
                         <div class="pricing-title">
-                            <h3>{{$pakage->title}}</h3>
+                            <h3>{{$emailHosting->title}}</h3>
                         </div>
                         <div class="pricing-price">
-                            <span id="currencyNameChangeble{{$index}}" class="price-unit">BDT</span><span id="balance{{$index}}" style="color: #1abc9c;">{{$pakage->cost}}</span><span class="price-tenure">/{{$pakage->details_one}}</span>
-                            <input type="hidden"  id="price{{$index}}" value="{{$pakage->cost}}">
+                            <span id="currencyNameChangeble{{$index}}" class="price-unit">BDT</span><span id="balance{{$index}}" style="color: #1abc9c;">{{$emailHosting->cost}}</span><span class="price-tenure">/{{$emailHosting->details_one}}</span>
+                            <input type="hidden"  id="price{{$index}}" value="{{$emailHosting->cost}}">
                         
                         </div>
                         <div class="pricing-features">
                             <ul>
-                                <li>{{$pakage->details_two}}</li>
-                                <li>{{$pakage->details_three}}</li>
-                                <li>{{$pakage->details_four}}</li>
-                                <li>{{$pakage->details_five}}</li>
-                                <li>{{$pakage->details_six}}</li>
+                                <li>{{$emailHosting->details_two}}</li>
+                                <li>{{$emailHosting->details_three}}</li>
+                                <li>{{$emailHosting->details_four}}</li>
+                                <li>{{$emailHosting->details_five}}</li>
+                                <li>{{$emailHosting->details_six}}</li>
                             </ul>
                         </div>
                         <div class="pricing-action">
@@ -168,7 +168,7 @@
 
             @endforeach
             </div>
-        </div>
+    </div>
         @include('footer')
     </div>
 
