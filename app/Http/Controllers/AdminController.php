@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Auth;
+use Redirect;
+use App\Cloud;
 use App\Pakage;
 use App\Currency;
 use App\Portfolio;
-use Redirect;
 use App\Emailhosting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
@@ -270,6 +271,107 @@ class AdminController extends Controller
         $del=Emailhosting::destroy($id);
         return redirect()->route('emailhosting.show');
     }
+
+
+
+///////////////  CLOUD HOSTING METHODS//////////////////////////////////////////////////
+
+
+    public function cloudhostingShow(){
+        $pakage=Cloud::all();
+        return view('admin.cloudhosting-show')->with('pakage',$pakage);
+    }
+
+    public function cloudhostingEdit($id){
+        $pakage=Cloud::find($id);
+        return view('admin.cloudhosting-edit')->with('pakage',$pakage);
+    }
+
+    public function cloudhostingEditPost(Request $request){
+        $validation = Validator::make(Input::all(), 
+        array(
+            'title'   => 'required',
+            'cost'      => 'required',
+            'o1'      => 'required',
+            'o2'      => 'required',
+            'o3'      => 'required',
+            'o4'      => 'required',
+            'o5'      => 'required',
+            )
+        );
+
+
+
+
+        if($validation->fails()) {
+        //withInput keep the users info
+        return Redirect::back()->withInput()->withErrors('Please fillup all feild properly');
+         } else {
+
+        Cloud::where('id', $request->input('id'))->update(array(
+            'title'    =>  $request->input('title'),
+            'cost'    =>  $request->input('cost'),
+            'details_one'    =>  $request->input('mo'),
+            'details_two'    =>  $request->input('o1'),
+            'details_three'    =>  $request->input('o2'),
+            'details_four'    =>  $request->input('o3'),
+            'details_five'    =>  $request->input('o4'),
+            'details_six'    =>  $request->input('o5'),
+        ));
+        return redirect()->route('cloudhosting.show');
+
+        }
+    }
+
+    public function cloudhostingAdd(){
+        return view('admin.cloudhosting-add');
+    }
+
+
+    public function cloudhostingAddPost(Request $request){
+        $validation = Validator::make(Input::all(), 
+        array(
+            'title'   => 'required',
+            'cost'      => 'required',
+            'o1'      => 'required',
+            'o2'      => 'required',
+            'o3'      => 'required',
+            'o4'      => 'required',
+            'o5'      => 'required',
+            )
+        );
+
+
+
+
+        if($validation->fails()) {
+        //withInput keep the users info
+        return Redirect::back()->withInput()->withErrors('Please fillup all feild properly');
+         } else {
+
+        Cloud::create([
+            'title'    =>  $request->input('title'),
+            'cost'    =>  $request->input('cost'),
+            'details_one'    =>  $request->input('mo'),
+            'details_two'    =>  $request->input('o1'),
+            'details_three'    =>  $request->input('o2'),
+            'details_four'    =>  $request->input('o3'),
+            'details_five'    =>  $request->input('o4'),
+            'details_six'    =>  $request->input('o5'),
+        ]);
+        return redirect()->route('cloudhosting.show');
+
+        }
+    }
+
+    public function cloudhostingDelete($id){
+        $del=Cloud::destroy($id);
+        return redirect()->route('cloudhosting.show');
+    }
+
+
+
+
 //currency methods////////////////////////////////////////////////////////////////////////
 
     

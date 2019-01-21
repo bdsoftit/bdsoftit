@@ -76,7 +76,7 @@
 
         <section id="page-title">
             <div class="container clearfix">
-                <h1>Email Hosting</h1>
+                <h1>Cloud Hosting</h1>
             </div>
         </section>
 
@@ -86,33 +86,53 @@
                     <div class="col_one_third nobottommargin">
                         <div class="feature-box media-box">
                             <div class="fbox-media">
-                                <img height="250" width="300" src="{{asset('images/shop/email.png')}}" alt="Why choose Us?">
+                                <div class="row">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-4">
+                                        <i class="fa fa-bolt fa-5x"></i>
+                                        <i class="fa fa-bolt fa-5x"></i>
+                                    </div>
+                                    <div class="col-md-4"></div>
+                                </div>
+                                
                             </div>
                             <div class="fbox-desc">
-                                <h3>Email@yourdomain.com</h3>
-                                <p style="text-align: justify;">Email communication is one of the most reliable forms of communication. For personal requirements, there might be various tools available for communication. When it comes to communication between different organisations or businesses, the most formal and reliable way is to send emails. To make your email look authentic and reliable, the email should be sent from your business's domain based email address. </p>
+                                <h3 style="text-align: center;">Speed Like No One Else</h3>
+                                <p style="text-align: justify;">Our servers are ready for SSH in less than 30 seconds, average. Thanks to smart architecture based on SSD disks, accelerated networks and fast next-gen processors.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col_one_third nobottommargin">
                         <div class="feature-box media-box">
                             <div class="fbox-media"> 
-                                <img  src="{{asset('images/shop/email1.webp')}}" alt="Why choose Us?">
+                                <div class="row">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-4">
+                                        <i class="fa fa-lock fa-5x"></i>
+                                    </div>
+                                    <div class="col-md-4"></div>
+                                </div>
                             </div>
-                            <div class="fbox-desc"><br><br><br>
-                                <h3>Secure, ad-free email with 99.9% uptime guaranteed</h3>
-                                <p style="text-align: justify;">FRA Techonology's Mail guarantees you the most wanted availability with the utmost security and privacy to your account via EAR, TLS and TFA authentication. If you are currently maintaining your data on personal computers or your own servers, the odds are that we offer a better level of security than what you currently have in place.</p>
+                            <div class="fbox-desc">
+                                <h3 style="text-align: center;">Full Root and Full Control</h3>
+                                <p style="text-align: justify;">Virtually no limits in the operating system choice or software versions. DreamHost’s unmanaged servers can be based on Linux, BSD or even MS Windows. Major Linux distributions are already in pre-loaded, or bring your own.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col_one_third nobottommargin col_last">
                         <div class="feature-box media-box">
                             <div class="fbox-media">
-                                <img height="300" width="250" src="{{asset('images/shop/email2.png')}}" alt="Why choose Us?">
+                                <div class="row">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-4">
+                                        <i class="fa fa-cloud fa-5x"></i>
+                                    </div>
+                                    <div class="col-md-4"></div>
+                                </div>
                             </div>
-                            <div class="fbox-desc"><br>
-                                <h3>Seamless email migration</h3>
-                                <p style="text-align: justify;">Make your switch simple using our Migration tools. Our expert 24x7 technical support will help you make a smooth transition to FRA Techonology's Mail. Manage your business emails from FRA Techonology's Mail powerful Control Panel. Admins can set up individual mailbox quotas and privileges, email policies, group accounts, and more.</p>
+                            <div class="fbox-desc">
+                                <h3 style="text-align: center;">A Cloud That Grows With You:</h3>
+                                <p style="text-align: justify;">If your business needs grow enough for you to justify running your own private cloud, we can help you out. All the code is open source and we publicly disclose our architecture. We will help you migrate your workloads to your own private cloud when the time comes.</p>
                             </div>
                         </div>
                     </div>
@@ -140,24 +160,24 @@
             </div>
                 
             <div class="row pricing bottommargin clearfix">
-            @foreach($emailHosting as $index=> $emailHosting)
+            @foreach($cloudhosting as $index=> $cloudhosting)
                 <div class="col-lg-3">
                     <div class="pricing-box">
                         <div class="pricing-title">
-                            <h3>{{$emailHosting->title}}</h3>
+                            <h3>{{$cloudhosting->title}}</h3>
                         </div>
                         <div class="pricing-price">
-                            <span id="currencyNameChangeble{{$index}}" class="price-unit">BDT</span><span id="balance{{$index}}" style="color: #1abc9c;">{{$emailHosting->cost}}</span><span class="price-tenure">/{{$emailHosting->details_one}}</span>
-                            <input type="hidden"  id="price{{$index}}" value="{{$emailHosting->cost}}">
+                            <span id="currencyNameChangeble{{$index}}" class="price-unit">BDT</span><span id="balance{{$index}}" style="color: #1abc9c;">{{$cloudhosting->cost}}</span><span class="price-tenure">/{{$cloudhosting->details_one}}</span>
+                            <input type="hidden"  id="price{{$index}}" value="{{$cloudhosting->cost}}">
                         
                         </div>
                         <div class="pricing-features">
                             <ul>
-                                <li>{{$emailHosting->details_two}}</li>
-                                <li>{{$emailHosting->details_three}}</li>
-                                <li>{{$emailHosting->details_four}}</li>
-                                <li>{{$emailHosting->details_five}}</li>
-                                <li>{{$emailHosting->details_six}}</li>
+                                <li>{{$cloudhosting->details_two}}</li>
+                                <li>{{$cloudhosting->details_three}}</li>
+                                <li>{{$cloudhosting->details_four}}</li>
+                                <li>{{$cloudhosting->details_five}}</li>
+                                <li>{{$cloudhosting->details_six}}</li>
                             </ul>
                         </div>
                         <div class="pricing-action">
@@ -224,6 +244,14 @@
                 var pak6=document.getElementById("price5").value;
                 document.getElementById("balance5").innerText = Math.round(pak6/currency);
              }
+             if (document.getElementById("price6").value) {
+                var pak7=document.getElementById("price6").value;
+                document.getElementById("balance6").innerText = Math.round(pak7/currency);
+             }
+             if (document.getElementById("price7").value) {
+                var pak8=document.getElementById("price7").value;
+                document.getElementById("balance7").innerText = Math.round(pak8/currency);
+             }
         }
 
         $("#currency").change(function () {
@@ -232,11 +260,17 @@
              document.getElementById("currencyNameChangeble2").innerText = $(this).find(':selected').data('name');
              document.getElementById("currencyNameChangeble3").innerText = $(this).find(':selected').data('name');
 
-             if (document.getElementById("currencyNameChangeble4").value) {
+             if (document.getElementById("currencyNameChangeble4").innerText) {
                 document.getElementById("currencyNameChangeble4").innerText = $(this).find(':selected').data('name');
              }
-             if (document.getElementById("currencyNameChangeble5").value) {
+             if (document.getElementById("currencyNameChangeble5").innerText) {
+                document.getElementById("currencyNameChangeble5").innerText = $(this).find(':selected').data('name');
+             }
+             if (document.getElementById("currencyNameChangeble6").innerText) {
                 document.getElementById("currencyNameChangeble6").innerText = $(this).find(':selected').data('name');
+             }
+             if (document.getElementById("currencyNameChangeble7").innerText) {
+                document.getElementById("currencyNameChangeble7").innerText = $(this).find(':selected').data('name');
              }
         });
 

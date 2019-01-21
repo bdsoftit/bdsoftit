@@ -1,5 +1,6 @@
 <?php
 
+use App\Cloud;
 use App\Pakage;
 use App\Currency;
 use App\Subscribe;
@@ -36,7 +37,18 @@ Route::get('/hosting/email', function () {
     return view('email-hosting')->with('emailHosting',$emailHosting)->with('currency',$currency);
 });
 
+Route::get('/hosting/cloud', function () {
+    $currency=Currency::all();
+    $cloudhosting=Cloud::all();
+    return view('cloudhosting')->with('cloudhosting',$cloudhosting)->with('currency',$currency);
+});
+
 Route::get('/project/{id}', 'HomeController@portfolio')->name('single.portfolio');
+
+
+///////////////  ADMIN ROUTE ///////////////////////////////////////////////
+
+
 
 Route::group(['prefix' => 'admin'], function () {
 
@@ -60,6 +72,14 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/emailhosting/{id}', 'AdminController@emailhostingEdit')->name('emailhosting.edit');
     Route::put('/emailhosting/edit', 'AdminController@emailhostingEditPost')->name('emailhosting.edit.post');
     Route::delete('/emailhosting/delete/{id}', 'AdminController@emailhostingDelete')->name('emailhosting.delete');
+
+
+    Route::get('/cloudhosting', 'AdminController@cloudhostingShow')->name('cloudhosting.show');
+    Route::get('/cloudhosting/add', 'AdminController@cloudhostingAdd')->name('cloudhosting.add');
+    Route::post('/cloudhosting/add', 'AdminController@cloudhostingAddPost')->name('cloudhosting.add.post');
+    Route::get('/cloudhosting/{id}', 'AdminController@cloudhostingEdit')->name('cloudhosting.edit');
+    Route::put('/cloudhosting/edit', 'AdminController@cloudhostingEditPost')->name('cloudhosting.edit.post');
+    Route::delete('/cloudhosting/delete/{id}', 'AdminController@cloudhostingDelete')->name('cloudhosting.delete');
 
 
 

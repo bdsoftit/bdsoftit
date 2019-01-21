@@ -152,6 +152,11 @@
             <i class="fa fa-fw fa-bullseye"></i>
             <span>Email Hosting</span></a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('cloudhosting.show')}}">
+            <i class="fa fa-fw fa-bullseye"></i>
+            <span>Cloud Hosting</span></a>
+        </li>
       </ul>
 
       <div id="content-wrapper">

@@ -45,6 +45,8 @@
                                     </li>
                                     <li><a href="{{url('/hosting/email')}}">E-mail Hosting</a>
                                     </li>
+                                    <li><a href="{{url('/hosting/cloud')}}">Cloud Hosting</a>
+                                    </li>
                                 </div>
                                 <div class="col-md-4">
                                         <img src="{{asset('images/wd.jpg')}}">
@@ -52,7 +54,7 @@
                             </div>            
                         </ul>                            
                     </li>
-                    <li><a href="#">
+                    <li style="display: none;"><a href="#">
                             <div>About us</div>
                         </a>
                     </li>

@@ -19,8 +19,8 @@
               <h6 style="color:#0b87d0;">{{$pakage->details_six}}</h6>
               </div>
               <div class="card-footer text-muted">
-                  <a style="float: right;" href="{{route('emailhosting.edit',$pakage->id)}}" class="btn btn-success">Edit</a>&nbsp;
-                  <form class="form-inline" method="post" action="{{route('emailhosting.delete',$pakage->id)}}">
+                  <a style="float: right;" href="{{route('cloudhosting.edit',$pakage->id)}}" class="btn btn-success">Edit</a>&nbsp;
+                  <form class="form-inline" method="post" action="{{route('cloudhosting.delete',$pakage->id)}}">
                   @csrf
                   {{ method_field("DELETE") }}
                 <button style="float: right;" type="submit" onclick="return confirm('Are you sure?')" class="btn btn-danger">Delete</button>

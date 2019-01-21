@@ -206,15 +206,15 @@
     <script>
         function currency(){
              var currency=document.getElementById("currency").value;
-             var pak1=document.getElementById("price0").value;
-             var pak2=document.getElementById("price1").value;
-             var pak3=document.getElementById("price2").value;
-             var pak4=document.getElementById("price3").value;
+             var pak1=document.getElementById("price0").value/currency;
+             var pak2=document.getElementById("price1").value/currency;
+             var pak3=document.getElementById("price2").value/currency;
+             var pak4=document.getElementById("price3").value/currency;
              
-             document.getElementById("balance0").innerText = Math.round(pak1/currency).toFixed(2);
-             document.getElementById("balance1").innerText = Math.round(pak2/currency).toFixed(2);
-             document.getElementById("balance2").innerText = Math.round(pak3/currency).toFixed(2);
-             document.getElementById("balance3").innerText = Math.round(pak4/currency).toFixed(2);
+             document.getElementById("balance0").innerText = pak1.toFixed(2);
+             document.getElementById("balance1").innerText = pak2.toFixed(2);
+             document.getElementById("balance2").innerText = pak3.toFixed(2);
+             document.getElementById("balance3").innerText = pak4.toFixed(2);
              
              if (document.getElementById("price4").value) {
                 var pak5=document.getElementById("price4").value;

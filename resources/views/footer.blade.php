@@ -25,15 +25,15 @@
                         </div>
                         <div class="col_one_third col_last">
                             <div class="widget widget_links clearfix">
-                                <h4>Blogroll</h4>
+                                <i class="fa fa-link fa-4x"></i><br><br>
                                 <ul>
-                                    <li><a href="#">Documentation</a></li>
-                                    <li><a href="#">Feedback</a></li>
-                                    <li><a href="#">Plugins</a></li>
-                                    <li><a href="#">Support Forums</a></li>
-                                    <li><a href="#">Themes</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Laracast</a></li>
+                                    <li><a href="{{url('/hosting')}}">Web Hosting</a></li>
+                                    <li><a href="{{url('/hosting/email')}}">Email Hosting</a></li>
+                                    <li><a href="{{url('/hosting/cloud')}}">Cloud Hosting</a></li>
+                                    <li><a href="{{url('/contact')}}">Domain Registration</a></li>
+                                    <li><a href="{{url('/web-application')}}">Web Application Development</a></li>
+                                    <li><a href="{{url('/web-design')}}">Web Design</a></li>
+                                    <li><a href="{{url('/contact')}}">Contact With Us</a></li>
                                 </ul>
                             </div>
                         </div>

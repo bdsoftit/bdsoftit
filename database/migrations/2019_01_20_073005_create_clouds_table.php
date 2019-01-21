@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEmailhostingsTable extends Migration
+class CreateCloudsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateEmailhostingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('emailhostings', function (Blueprint $table) {
+        Schema::create('clouds', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
             $table->float('cost');
@@ -34,6 +34,6 @@ class CreateEmailhostingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('emailhostings');
+        Schema::dropIfExists('clouds');
     }
 }
